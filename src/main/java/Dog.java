@@ -1,4 +1,7 @@
-package PACKAGE_NAME;
+public class Dog implements Pet{
 
-public class Dog {
+    @Override
+    public void say() {
+        System.out.println("Way Way");
+    }
 }

@@ -1,10 +1,26 @@
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
 
 @Configuration
 public class AppConfig {
- 
+
+@Bean(name = "myPet")
+public Dog getDog() {
+        Dog dog = new Dog();
+        return dog;
+
+}
+
+    @Bean(name = "myPerson")
+    public Person getPerson(Pet pet) {
+        Person person = new Person(pet);
+//        dog.say();
+        return person;
+
+    }
+
+
+
     @Bean(name="helloworld")
     public HelloWorld getHelloWorld() {
         HelloWorld helloWorld = new HelloWorld();

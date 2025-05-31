@@ -5,8 +5,16 @@ public class App {
     public static void main(String[] args) {
         ApplicationContext applicationContext =
                 new AnnotationConfigApplicationContext(AppConfig.class);
-        HelloWorld bean =
-                (HelloWorld) applicationContext.getBean("helloworld");
-        System.out.println(bean.getMessage());
+//        Pet pet =  (Pet) applicationContext.getBean("myPet", Pet.class);
+//        pet.say();
+        Person person = (Person) applicationContext.getBean("myPerson");
+        person.callYourPet();
+
+
+//        ApplicationContext applicationContext =
+//                new AnnotationConfigApplicationContext(AppConfig.class);
+//        HelloWorld bean =
+//                (HelloWorld) applicationContext.getBean("helloworld");
+//        System.out.println(bean.getMessage());
     }
 }
