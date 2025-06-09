@@ -1,3 +1,5 @@
+package sobesedSpring.test;
+
 public class HelloWorld {
  
     private String message;
